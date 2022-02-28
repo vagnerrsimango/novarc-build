@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' >
+
+    <title>Conedarte - Loja</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!--    Brand-->
+
+    <link rel="apple-touch-icon" href="assets/img/logos/logo_hands.png">
+    <link rel="icon" type="image/png" href="assets/img/logos/logo_hands.png">
+
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!--    Css engine core -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/paper-kit.css">
+<!--    <link rel="stylesheet" href="assets/css/custom.css">-->
+    <link rel="stylesheet" href="assets/css/shop-homepage.css">
+
+
+    <!--Animation-->
+
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+
+
+</head>
+
+
+<script>
+
+    var config = {
+        apiKey: "AIzaSyBMZsaOG85rAAwERZW1YPhHWfFcjfP67VY",
+        authDomain: "conedarte-e6cec.firebaseapp.com",
+        databaseURL: "https://conedarte-e6cec.firebaseio.com",
+        projectId: "conedarte-e6cec",
+        storageBucket: "conedarte-e6cec.appspot.com",
+        messagingSenderId: "228173133239",
+        appId: "1:228173133239:web:c354b0c371df2ee5c3e432"
+    };
+
+    firebase.initializeApp(config);
+
+
+</script>
+
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" color-on-scroll="300">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="index.html" >
+                Conedarte - Loja
+            </a>
+            <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <ul class="navbar-nav">
+
+                <li class="nav-item" id="youtube">
+                    <a class="nav-link" rel="tooltip" title="Subscribe on youtube" data-placement="bottom" href="https://www.youtube.com/channel/UC8JCsVumXcSw8jBjlGgtWLg" target="_blank">
+                        <i class="fa fa-youtube"></i>
+                        <p class="d-lg-none">Youtube</p>
+                    </a>
+                </li>
+                <li class="nav-item" id="twitter">
+                    <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/conedarte" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                        <p class="d-lg-none">Twitter</p>
+                    </a>
+                </li>
+                <li class="nav-item" id="facebook">
+                    <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/Conedarte" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                        <p class="d-lg-none">Facebook</p>
+                    </a>
+                </li>
+                <li class="nav-item" id="instagram">
+                    <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/conedarte_moz/" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                        <p class="d-lg-none">Instagram</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- <div class="col-lg-3">
+
+            <h1 class="my-4">Galeria</h1>
+
+            <div class="list-group">
+                <a href="#" class="list-group-item">Artes Visuais</a>
+            </div>
+
+        </div> -->
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-12">
+
+            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+<!--                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block img-fluid" src="assets/img/banner.jpeg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid" src="assets/img/WhatsApp Image 2020-06-01 at 22.52.57.jpeg" alt="Second slide">
+                    </div>
+<!--                    <div class="carousel-item">-->
+<!--                        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">-->
+<!--                    </div>-->
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+            <div class="panel panel-default">
+                <!-- <div class="panel-heading h3 info-title">Novidades</div>
+
+
+            <div class="row panel-body" id="art_work_store"> -->
+
+<!--                artwork from database -->
+
+
+            </div>
+
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading h3 info-title mb-2"><h5>Nossa loja de artes visuais</h5> </div>
+
+
+
+<!--                <div class="row">-->
+
+<!--                <div class="col-lg-4 col-md-6 mb-4">-->
+<!--                    <div class="card h-100">-->
+<!--                        <a href="#"><img class="card-img-top" src="./assets/img/Imagens_Obras/Artistas%20Visuais/Arqueiro/Pobre%20Miseravel.jpeg" alt=""></a>-->
+<!--                        <div class="card-body">-->
+<!--                            <h4 class="card-title">-->
+<!--                                <a href="#">Pobre Miseravél</a>-->
+<!--                            </h4>-->
+<!--                            <h5>18.135,00 MT</h5>-->
+<!--                            <p class="card-text">Por : <strong>Arqueiro</strong></p>-->
+<!--                        </div>-->
+<!--                        <div class="card-footer">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-lg-4 col-md-6 mb-4">-->
+<!--                    <div class="card h-100">-->
+<!--                        <a href="#"><img class="card-img-top" src="./assets/img/Imagens_Obras/Artistas%20Visuais/Marlon%20Ferrer/Artwork/GitGoodGas.jpeg" alt=""></a>-->
+<!--                        <div class="card-body">-->
+<!--                            <h4 class="card-title">-->
+<!--                                <a href="#">Git Good Gas</a>-->
+<!--                            </h4>-->
+
+<!--                            <h5>2.223,00 MT (A4)</h5>-->
+<!--                            <h6>3.393,00 MT (A3)</h6>-->
+<!--                            <p class="card-text">Por : <strong> Marlon Ferrer</strong></p>-->
+<!--                        </div>-->
+<!--                        <div class="card-footer">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-lg-4 col-md-6 mb-4">-->
+<!--                    <div class="card h-100">-->
+<!--                        <a href="#"><img class="card-img-top" src="./assets/img/Imagens_Obras/Artistas%20Visuais/Marlon%20Ferrer/Artwork/KimonoBlade.jpeg" alt=""></a>-->
+<!--                        <div class="card-body">-->
+<!--                            <h4 class="card-title">-->
+<!--                                <a href="#">Kimono Blade</a>-->
+<!--                            </h4>-->
+
+<!--                            <h5>2.215,00 MT (A4)</h5>-->
+<!--                            <h6>3.100,00 MT (A3)</h6>-->
+
+<!--                            <p class="card-text">Por : <strong> Marlon Ferrer</strong></p>-->
+<!--                        </div>-->
+<!--                        <div class="card-footer">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+
+
+<!--                <div class="col-lg-4 col-md-6 mb-4">-->
+<!--                    <div class="card h-100">-->
+<!--                        <a href="#"><img class="card-img-top" src="assets/img/Imagens_Obras/Artistas Visuais/Marlon Ferrer/Cartoon or Anime/Roronoa Zoro.jpeg" alt=""></a>-->
+<!--                        <div class="card-body">-->
+<!--                            <h4 class="card-title">-->
+<!--                                <a href="#">Roronoa Zoro</a>-->
+<!--                            </h4>-->
+<!--                            <h5>2.215,00 MT (A4)</h5>-->
+<!--                            <h6>3.100,00 MT (A3)</h6>-->
+<!--                            <p class="card-text">Por : <strong>Marlon Ferrer</strong> </p>-->
+<!--                        </div>-->
+<!--                        <div class="card-footer">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-lg-4 col-md-6 mb-4">-->
+<!--                    <div class="card h-100">-->
+<!--                        <a href="#"><img class="card-img-top" src="assets/img/Imagens_Obras/Artistas Visuais/Marlon Ferrer/Cartoon or Anime/Zaraki Kenpachi.jpeg" alt=""></a>-->
+<!--                        <div class="card-body">-->
+<!--                            <h4 class="card-title">-->
+<!--                                <a href="#">Zaraki Kenpachi</a>-->
+<!--                            </h4>-->
+
+<!--                            <h5>2.215,00 MT (A4)</h5>-->
+<!--                            <h6>3.100,00 MT (A3)</h6>-->
+
+<!--                            <p class="card-text">Por : <strong> Marlon Ferrer</strong></p>-->
+<!--                        </div>-->
+<!--                        <div class="card-footer">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-lg-4 col-md-6 mb-4">-->
+<!--                    <div class="card h-100">-->
+<!--                        <a href="#"><img class="card-img-top" src="assets/img/Imagens_Obras/Artistas Visuais/Marlon Ferrer/Cartoon or Anime/Super Mario.jpeg" alt=""></a>-->
+<!--                        <div class="card-body">-->
+<!--                            <h4 class="card-title">-->
+<!--                                <a href="#">Super Mario</a>-->
+<!--                            </h4>-->
+
+<!--                            <h5>2.215,00 MT (A4)</h5>-->
+<!--                            <h6>3.100,00 MT (A3)</h6>-->
+
+<!--                            <p class="card-text">Por : <strong> Marlon Ferrer</strong></p>-->
+<!--                        </div>-->
+<!--                        <div class="card-footer">-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+            <!-- /.row -->
+
+                <div class="row panel-body" id="art_work_store_all">
+
+                    <!--                artwork from database -->
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!--Footer-->
+<footer class="footer   footer-white ">
+    <div class="container">
+        <div class="row">
+            <nav class="footer-nav">
+                <ul>
+                    <li>
+                        <a href="#main" target="_blank">CONEDARTE</a>
+                    </li>
+
+
+                </ul>
+            </nav>
+            <div class="credits ml-auto">
+          <span  class="copyright">
+            ©
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Criado por <i class=""></i><a href="github.com/eltonvilanculo" class="text-monospace"> Elton Vilanculo</a>
+          </span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer-->
+
+<!-- Bootstrap core JavaScript -->
+<script src="assets/js/jquery-2.1.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--&lt;!&ndash; MDB core JavaScript &ndash;&gt;-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>-->
+
+
+<!--backend-->
+
+<script src="./js/main_store.js"></script>
+<!--Login Modal-->
+<div class="modal fade" id="paymentModalForm" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-register">
+        <div class="modal-content">
+            <div class="modal-header no-border-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h6 class="text-muted">Pagamento Mpesa </h6>
+                <h3 class="modal-title text-center">Coned'arte</h3>
+                <p id="paymentAmountText"></p>
+
+            </div>
+
+            <div class="modal-body" id="firebaseui-auth-container">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="payment-mail">Email</label>
+                        <input type="email" class="form-control" id="payment-mail" placeholder="@mail">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="payment-name">Nome completo</label>
+                        <input type="text" class="form-control" id="payment-name" placeholder="Nome completo">
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="payment-address">Endereço de entrega</label>
+                        <input type="text" class="form-control" id="payment-address">
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label for="payment-phone">Confirmar contacto de pagamento</label>
+                        <input type="text" class="form-control" id="payment-phone">
+                    </div>
+
+
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            Concordo com os termos
+                            <span class="form-check-sign">
+            <span class="check"></span>
+          </span>
+                        </label>
+                    </div>
+                </div>
+
+                <button id="btn-submit-payment" type="submit" class="btn btn-success btn-round" onclick="payListenner()">Confirmar pagamento</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-register">
+        <div class="modal-content">
+            <div class="modal-header no-border-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h6 class="text-muted"></h6>
+                <h3 class="modal-title text-center">Parabéns ! </h3>
+                <p id="paymentAmountText"></p>
+
+            </div>
+
+            <div class="modal-body" >
+   
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_uv6yc7.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px;"  loop  autoplay></lottie-player>
+
+        </div>
+    </div>
+</div>
+</body>
+
+
+
+</html>
+

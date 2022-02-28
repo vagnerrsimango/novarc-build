@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Conedarte Admin Panel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="./vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="./css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="./assets/img/logos/logo_hands.png">
+    <link rel="stylesheet" href="./assets/css/loading-bar.min.css">
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+
+
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 50vh;
+            width: 1000px;
+            margin-left: 20px;/* The width is the width of the web page */
+        }
+    </style>
+</head>
+<script>
+
+    var config = {
+        apiKey: "AIzaSyBMZsaOG85rAAwERZW1YPhHWfFcjfP67VY",
+        authDomain: "conedarte-e6cec.firebaseapp.com",
+        databaseURL: "https://conedarte-e6cec.firebaseio.com",
+        projectId: "conedarte-e6cec",
+        storageBucket: "conedarte-e6cec.appspot.com",
+        messagingSenderId: "228173133239",
+        appId: "1:228173133239:web:c354b0c371df2ee5c3e432"
+    };
+
+    firebase.initializeApp(config);
+    // firebase.analytics();
+
+</script>
+<body>
+<header class="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="search-panel">
+            <div class="search-inner d-flex align-items-center justify-content-center">
+                <div class="close-btn">Close <i class="fa fa-close"></i></div>
+                <form id="searchForm" action="#">
+                    <div class="form-group">
+                        <input type="search" name="search" placeholder="O que deseja ...">
+                        <button type="submit" class="submit">Pesquisar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="navbar-header">
+                <!-- Navbar Header--><a href="./main.html" class="navbar-brand">
+                <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Conedarte</strong><strong>Dashboard</strong></div>
+                <div class="brand-text brand-sm"><strong class="text-primary">C</strong><strong>RT</strong></div></a>
+                <!-- Sidebar Toggle Btn-->
+                <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+            </div>
+            <div class="right-menu list-inline no-margin-bottom">
+                <div class="list-inline-item"><a href="./create.html" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></div>
+
+
+                <!-- Log out               -->
+                <div class="list-inline-item logout">                   <a id="logout" onclick="logout()" class="nav-link"> <span class="d-none d-sm-inline">Logout </span><i class="icon-logout"></i></a></div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="d-flex align-items-stretch">
+    <!-- Sidebar Navigation-->
+    <nav id="sidebar">
+        <!-- Sidebar Header-->
+        <div class="sidebar-header d-flex align-items-center">
+
+            <div class="title">
+                <h1 class="h5">Admnistrador do Sistema </h1>
+
+            </div>
+        </div>
+        <!-- Sidebar Navidation Menus--><span class="heading">Gestão geral</span>
+        <ul class="list-unstyled">
+            <li class="active"><a href="./main.html"> <i class="icon-home"></i>Home</a></li>
+
+
+        </ul><span class="heading">Extras</span>
+
+        <ul class="list-unstyled">
+            <li><a href="./main.html"> <i class="icon-settings"></i>Ajuda</a></li>
+            <li><a href="#"> <i class="icon-info"></i>Sobre</a></li>
+            <li><a href="#"> <i class="icon-settings-1"></i>Definições</a></li>
+
+        </ul>
+
+    </nav>
+    <!-- Sidebar Navigation end-->
+    <div class="page-content">
+        <div class="page-header">
+            <div class="container-fluid">
+                <h2 class="h5 no-margin-bottom">Cadastrar Artista </h2>
+            </div>
+        </div>
+        <section class="no-padding-top no-padding-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" >
+                    <form >
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" id="name" class="form-control" placeholder="Nome do artista" required>
+                            </div>
+                            <div class="col">
+                                <input type="email" id="email" class="form-control" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-row mt-5">
+                            <div class="col">
+                                <input type="text" id="phone" class="form-control" placeholder="+258841111111" required>
+                            </div>
+                            <div class="col">
+                                <select id="category" class="form-control" required>
+                                    <option selected>Especialidade</option>
+                                    <option>Músico</option>
+                                    <option>Artista Visual</option>
+                                    <option>Escritor (a)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <div class="col">
+                                <label for="artist_photo">Foto do artista</label>
+                                <input type="file" id="artist_photo" class="form-control" required>
+                            </div>
+<!--                            <div class="col">-->
+
+<!--                                <label for="art_photo">Exemplo de obra ( obrigatório )</label>-->
+<!--                                <input type="file"  id="art_photo" class="form-control" required>-->
+<!--                            </div>-->
+
+<!--                            <div class="col">-->
+
+<!--                                <label for="art_photo">Titulo da obra ( obrigatório )</label>-->
+<!--                                <input type="text"  id="art_name" class="form-control" placeholder="Titulo da obra ( obrigatório )" >-->
+<!--                            </div>-->
+                        </div>
+
+<!--                        <div class="form-row mt-5">-->
+
+<!--                            <div class="col-md-3">  <input type="text" id="art_price" class="form-control" placeholder="12.000 MT " required></div>-->
+<!--                            <div class="col-md-3">  <input type="text" id="art_year" class="form-control" placeholder="Inserir o ano ex: 2016 ( obrigatório ) " required></div>-->
+<!--                            <div class="col">  <input type="text" id="art_desc" class="form-control" placeholder="Especificações da obra " required></div>-->
+
+<!--                        </div>-->
+
+                        <div class="form-row mt-5">
+                            <textarea class="form-control" id="about_begin" rows="3" placeholder="Resumo sobre o início de carreira do artista ..."></textarea>
+                        </div>
+
+                        <div class="form-row mt-5">
+                            <textarea class="form-control" id="about_experience" rows="3" placeholder="Resumo sobre a experiência do artista ..."></textarea>
+                        </div>
+
+                        <div class="form-row mt-5">
+                            <textarea class="form-control" id="about_tecnique" rows="3" placeholder="Tecnicas"></textarea>
+                        </div>
+
+                        <div class="form-row mt-5">
+                            <textarea class="form-control" id="about_inspiration" rows="3" placeholder="Fonte de inspiracao"></textarea>
+                        </div>
+
+                        <div class="row"><button id="btn_submit" type="button" class="btn btn-danger mt-5 align-items-center" onclick="registerListenner()">Registar artista</button></div>
+
+                        <div class="row">
+
+                            <div id="myItem1" class="p-5 mb-auto" ></div>
+
+                        </div>
+                        <div class="row mt-5"></div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <footer class="footer">
+            <div class="footer__block block no-margin-bottom">
+
+            </div>
+        </footer>
+    </div>
+</div>
+<!-- JavaScript files-->
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/umd/popper.min.js"> </script>
+<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="./vendor/jquery.cookie/jquery.cookie.js"> </script>
+
+<script src="./vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="./js/front.js"></script>
+
+<script src="./assets/js/loading-bar.min.js"></script>
+<script src="./js/backend.js"></script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+</body>
+</html>

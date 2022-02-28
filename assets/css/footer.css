@@ -1,0 +1,9 @@
+.footer{
+    background: url("../img/brushes/brush-yellow.png");
+}
+
+footer a{
+    font-weight: bolder;
+    font-size: 1rem;
+    color: #0a0c0d;
+}

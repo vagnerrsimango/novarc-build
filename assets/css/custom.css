@@ -1,0 +1,242 @@
+:root {
+  font-size: 16px;
+}
+
+.footer {
+  /* background: url("../img/brushes/brush-yellow.png"); */
+}
+
+footer a {
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #0a0c0d;
+}
+
+.description {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: normal;
+}
+
+.img-circle.img-no-padding.img-responsive {
+  width: 42px;
+  height: 42px;
+}
+
+.navbar.navbar-transparent .navbar-brand {
+  color: #ffffff;
+  /*font-weight: inherit;*/
+  padding: 22px 0;
+  margin-left: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  font-size: 2rem;
+  transition: 4000ms;
+}
+
+mark {
+  background: none;
+  color: #ffffff;
+  /*font-weight: inherit;*/
+  font-weight: 700;
+  font-size: 2rem;
+  transition: 1000ms;
+}
+iframe {
+  width: 100%;
+  height: 100vh;
+}
+mark#C:hover {
+  color: yellow;
+}
+mark#O:hover {
+  color: pink;
+}
+mark#N:hover {
+  color: blue;
+}
+mark#D:hover {
+  color: red;
+}
+mark#A:hover {
+  color: #5a283d;
+}
+mark#R:hover {
+  color: #0c5460;
+}
+mark#T:hover {
+  color: #2ba9cd;
+}
+mark#E:hover {
+  color: #00aa88;
+}
+img .img-responsive,
+.img-rounded {
+  width: 250px;
+  height: 250px;
+}
+.carousel-item > img {
+  width: 250px;
+  height: 480px;
+}
+
+div#paint {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 673px;
+  height: 900px;
+  right: -140px;
+  bottom: -60px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background-image: url("../img/brushes/bg-brushes.svg");
+  background-size: contain;
+  background-position: bottom;
+}
+/*Menu versao mobile*/
+.navbar .navbar-collapse:after {
+  background-color: black;
+  color: #f4f4f4;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  text-align: center;
+  color: #ffffff;
+  padding: 22px 0;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.navbar {
+  color: #f4f4f4;
+}
+.navbar .navbar-brand {
+  color: white;
+}
+.navbar {
+  background: #000;
+}
+
+.navbar-transparent .navbar-nav .nav-item .nav-link:not(.btn),
+[class*="bg"] .navbar-nav .nav-item .nav-link:not(.btn) {
+  color: #f4f4f4;
+  border-color: gray;
+  /*font-weight: lighter;*/
+  font-size: medium;
+  font-size: 12px;
+}
+
+#youtube .nav-link {
+  color: #ff4949;
+}
+#twitter .nav-link {
+  color: #1da1f2;
+}
+#facebook .nav-link {
+  color: #4267b2;
+}
+#instagram .nav-link {
+  color: #fab07b;
+}
+
+.section-dark div {
+  color: #ffffff;
+}
+.btn-success {
+  background-color: palevioletred;
+  border-color: palevioletred;
+  color: white;
+}
+.btn-success:hover {
+  background-color: rgb(126, 116, 52);
+  border-color: rgb(126, 116, 52);
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  mark {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/*Slideshow*/
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
+}

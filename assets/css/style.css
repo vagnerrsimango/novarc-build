@@ -1,0 +1,16 @@
+:root{
+    font-size: 16px;
+}
+
+i{
+    font-size: 2rem;
+    color:deeppink ;
+
+}
+i:hover{
+    color: pink;
+}
+
+p{
+    font-weight: normal;
+}

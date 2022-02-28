@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <!--    Brand-->
+  
+      <link rel="apple-touch-icon" href="../assets/img/logos/logo_hands.png">
+      <link rel="icon" type="image/png" href="../assets/img/logos/logo_hands.png">
+  
+  
+      <!--     Fonts and icons     -->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  
+  
+      <!--    Css engine core -->
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link href="./assets/css/paper-kit.css?v=2.2.0" rel="stylesheet" />
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+
+    <title>Entrar</title>
+  </head>
+  <body>
+      
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBMZsaOG85rAAwERZW1YPhHWfFcjfP67VY",
+          authDomain: "conedarte-e6cec.firebaseapp.com",
+          databaseURL: "https://conedarte-e6cec.firebaseio.com",
+          projectId: "conedarte-e6cec",
+          storageBucket: "conedarte-e6cec.appspot.com",
+          messagingSenderId: "228173133239",
+          appId: "1:228173133239:web:c354b0c371df2ee5c3e432"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+  
+ 
+  
+  <div class="content">
+      <!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="300">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="../index.html" >
+                <mark id="C">C</mark>
+                <mark id="O">O</mark>
+                <mark id="N">N</mark>
+                <mark id="E">E</mark>
+                <mark id="D">D</mark>
+                <mark id="A">A</mark>
+                <mark id="R">R</mark>
+                <mark id="T">T</mark>
+                <mark id="E2">E</mark>
+
+            </a>
+            <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </button>
+        </div>
+     
+    </div>
+</nav>
+<!-- End Navbar -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>Bem vindo</h3>
+              <p class="mb-4">Entre na plataforma Coned'arte para ter accesso as diversas funcionalidades e estar apto a fazer aquisições .</p>
+            </div>
+            <form action="#" method="post">
+              <div class="form-group first">
+                <label for="username">Utilizador</label>
+                <input type="text" class="form-control" id="username" autocomplete="off">
+
+              </div>
+              <div class="form-group last mb-4">
+                <label for="password">Senha</label>
+                <input type="password" class="form-control" id="password">
+                
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">Lembrar me</span>
+                  <input type="checkbox" />
+                  <div class="control__indicator"></div>
+                </label>
+                <span class="ml-auto"><a href="#" class="forgot-pass">Esquecí minha senha</a></span> 
+              </div>
+
+              <input type="submit" value="Log In" class="btn btn-block btn-primary">
+
+              <span class="d-block text-left my-4 text-muted">&mdash; Ou entrar com : &mdash;</span>
+              
+              <div class="social-login d-flex justify-content-center">
+                <a href="#" class="facebook">
+                  <span class="icon-facebook mr-3"></span> 
+                </a>
+             
+                <a href="#" class="google" onclick="googleSignInPopup()">
+                  <span class="icon-google mr-3"></span> 
+                </a>
+              </div>
+            </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+<footer class="footer   footer-white " >
+    <div class="container">
+        <div class="row">
+            <nav class="footer-nav">
+                <ul>
+                    <li>
+                        <a href="#main" target="_blank">CONEDARTE</a>
+                    </li>
+
+
+                </ul>
+            </nav>
+            <div class="credits ml-auto">
+          <span  class="copyright">
+            ©
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Criado por <i class=""></i><a href="https://github.com/eltonvilanculo" class="text-monospace"> Visum DEV</a>
+          </span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer-->
+  
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+var provider = new firebase.auth.GoogleAuthProvider();
+
+function googleSignInPopup() {
+  // [START auth_google_signin_popup]
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      /** @type {firebase.auth.OAuthCredential} */
+      var credential = result.credential;
+
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+
+     
+
+
+      alert(`${user.displayName} bem vindo !`)
+
+      window.location="../index.html"
+      // ...
+    }).catch((error) => {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+  // [END auth_google_signin_popup]
+}
+    </script>
+  </body>
+</html>
